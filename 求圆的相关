@@ -1,0 +1,18 @@
+#include <stdio.h>
+  int main()
+{
+    double r,h,c,s,qs,qv,zv;
+    double PI=3.1415926;
+    scanf ("%lf,%lf",&r,&h);
+    c=2*PI*r;
+    s=PI*r*r;
+    qs=4*PI*r*r;
+    qv=(4.0/3.0)*PI*r*r*r;
+    zv=s*h;
+    printf ("c=%.3lf\n",c);
+    printf ("s=%.3lf\n",s);
+    printf ("qs=%.3lf\n",qs);
+    printf ("qv=%.3lf\n",qv);
+    printf ("zv=%.3lf",zv);
+    return 0;
+}
