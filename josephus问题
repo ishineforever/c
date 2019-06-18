@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <string.h>
+ 
+void josegh (int p[],int n,int s,int m);
+ 
+int main()
+{
+    int N;
+    while(~scanf ("%d",&N))
+    {
+        int p[N];
+        josegh (p,N,1,2);
+        printf ("%d\n",p[0]);
+    }
+    return 0;
+}
+ 
+void josegh (int p[],int n,int s,int m)
+{
+    int i,j,w;
+    for(i=1;i<=n;i++)
+        p[i-1]=i;
+ 
+    for (i=n;i>=2;i--){
+        s=(s+m-1)%i;
+        if(s==0) s=i;
+        for (j=s;j<i;j++) p[j-1]=p[j];
+    }
+}
